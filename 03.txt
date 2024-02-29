@@ -1,0 +1,44 @@
+INT VS INTEGER
+
+INTEGER: MATEMATIKAI VÉGTELEN
+
+INT: KORLÁTOS, PROJEKT SETTING
+
+
+"max" operátor, halmazra alkalmazható, csak intekre, ha rendezhető valami használható(?)
+
+substraction/restriction in domain/range, menő cucc
+
+SEQUENCES/PARTIAL FUNCTION/STRUCT/RECORD ajánlott 
+
+{} empty set
+[] üres sequence -> lehet parciális függvényként lekérni az adott elemét, index alapján
+
+
+assert -> megmondom mi igaz azon a ponton vagyis a törzsében, igazából segít a bizonyítónak (kijelentjük hogy ez igaz ezen a ponton és kész)
+
+select -> nemdeterminisztikus switch
+
+
+
+
+kérdések: user input? egyszerre a kiadás bevétel, vagy egymás után? külön fájlból a cuccokat összeszedni, egész vagy tört? nagyságrend? egyesével vagy függvény alapján
+
+
+user input: explicit kell megmondani vagy csak jelezni kell hogy külsős?  -> see calculator.mch
+
+
+össze kell kötni az absztrakt gépeket vagy csak egy nagyban legyen?
+
+
+ProB?
+prob.hhu.de -> spec tesztelés
+
+
+
+PRE/THEN -> ha nem teljesen meg sem lehet hívni az operációt
+
+DEFINITIONS -> c-s makró pretty much, const/readonly cucc
+
+
+def fájlban legyenek jól elkülönítve vizuálisan, full nagybetű

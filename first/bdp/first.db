@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="C:\ELTE\AtelierB\Projects\first\bdp\expand_src" old_decomp_dir="C:\ELTE\AtelierB\Projects\first\bdp\src">
+        <!-- Definition directory list -->
+        <!-- Proof mechanisms -->
+        <!-- Component file list -->
+        <component_file path="C:/ELTE/AtelierB/Projects/first/src" name="firstMachine" suffix="mch" user="balaz">
+            <component name="firstMachine" type="specification" />
+        </component_file>
+        <component_file path="C:/ELTE/AtelierB/Projects/first/src" name="secondMachine" suffix="mch" user="balaz">
+            <component name="secondMachine" type="specification" />
+        </component_file>
+    </project>
+</db_xml>

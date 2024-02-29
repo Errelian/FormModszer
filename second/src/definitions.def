@@ -1,0 +1,9 @@
+DEFINITIONS
+    INIT_STATEMENT == aa :: INTEGER ||
+        has_aa := FALSE ||
+        bb :: INTEGER ||
+        has_bb := FALSE ||
+        result :: INTEGER ||
+        has_result := FALSE ;
+        
+    DOMAIN == 1..10

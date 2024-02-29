@@ -1,0 +1,5 @@
+digraph {
+firstMachine [ label=" firstMachine " shape= box ]
+secondMachine [ label=" secondMachine " shape= box ]
+
+}
