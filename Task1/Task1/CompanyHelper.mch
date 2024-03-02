@@ -23,8 +23,10 @@ DEFINITIONS
 
 VARIABLES
         income_array,
+        income_read,
         working_income_array,
         expense_array,
+        expense_read,
         
         minimum_income,
         has_min_income,
@@ -35,8 +37,10 @@ VARIABLES
         
 INVARIANT
     income_array : seq(INTEGER) &
-    working_income_array : seq(INTEGER) &//is income/expense an int or a float?
+    income_read : INTEGER &
+    working_income_array : seq(INTEGER) &//is income/expense an int or a float? do we want to read data starting form day 1 to 10 or day 10 to 1?
     expense_array : seq(INTEGER) &//how do I create a sequence that stores a certain type of data? is this correct?
+    expense_read : INTEGER &
     
     minimum_income : INTEGER & //do I need to define functions here? they are technically invariants I guess
     has_min_income : BOOL &
@@ -46,9 +50,11 @@ INVARIANT
     highest_income_index : INTEGER
     
 INITIALISATION
-    income_array :: seq(INTEGER) || //is there a way to initalise with empty sequences?
+    income_array :: seq(INTEGER) || //is there a way to initalise with empty sequences without type mismatching?
+    income_read :: INTEGER ||
     working_income_array :: seq(INTEGER) ||
     expense_array :: seq(INTEGER) || //sequence typing is a question in general
+    expense_read :: INTEGER ||
     
     minimum_income :: INTEGER ||
     has_min_income := FALSE ||
@@ -71,14 +77,14 @@ OPERATIONS
     PRE
         (size(income_array) < number_of_days) & has_min_income = TRUE
     THEN
-        income_array := (income_array <- INTEGER) //how do I do this without a type mismatch? am I tail inserting correctly?
+        income_read :: INTEGER || income_array := (income_array <- income_read) //how do I do this without a type mismatch? am I tail inserting correctly?
     END;
     
     read_into_expense_array =
     PRE
         (size(expense_array) < number_of_days) & has_min_income = TRUE
-    THEN
-        expense_array := (expense_array <- INTEGER)
+    THEN 
+        expense_read :: INTEGER || expense_array := (expense_array <- expense_read)
     END;
     
     find_largest_income_day =
