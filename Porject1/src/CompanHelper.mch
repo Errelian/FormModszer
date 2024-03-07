@@ -1,4 +1,4 @@
-/* CompanyHelper
+/* CompanHelper
  * Author: balaz
  * Creation date: 2024. 03. 02.
  *Feladat
@@ -16,7 +16,7 @@
  * archivált Atelier B projektet kell.
  */
 MACHINE
-    CompanyHelper
+    CompanHelper
     
 DEFINITIONS
     "definitions.def" //is the way I use this correct?
@@ -77,28 +77,70 @@ OPERATIONS
     PRE
         (size(income_array) < number_of_days) & has_min_income = TRUE
     THEN
-        income_read :: INTEGER || income_array := (income_array <- income_read) //how do I do this without a type mismatch? am I tail inserting correctly? nope
+        /*ANY 
+            new_seq, newly_read_value 
+        WHERE
+            new_seq : seq(INTEGER) &
+            newly_read_value : INTEGER &
+            new_seq = income_array <- newly_read_value
+        THEN
+            income_array := new_seq
+        END*/
+        /*ANY 
+            newly_read_value 
+        WHERE
+            newly_read_value : INTEGER
+        THEN
+            income_array := income_array <- newly_read_value //this
+        END*/
+        income_array:(
+            income_array : seq(INTEGER) &
+            front(income_array) = income_array$0 &
+            size(income_array) = size(income_array$0) + 1
+        )
     END;
     
     read_into_expense_array =
     PRE
         (size(expense_array) < number_of_days) & has_min_income = TRUE
     THEN 
-        expense_read :: INTEGER || expense_array := (expense_array <- expense_read)
+        expense_array:(
+            expense_array : seq(INTEGER) &
+            front(expense_array) = expense_array$0 &
+            size(expense_array) = size(expense_array$0) + 1
+        )
     END;
     
     find_largest_income_day =
     PRE
-        size(income_array) = number_of_days //I assume I need recursion for the search? how do I define functions and such like that? would those be total or partial functions
+        size(income_array) = number_of_days
     THEN
-        
+        //van egy income_array(i) amely bármely income_array(j) esetén nagyobb, i,j < number_of_days
+        ANY 
+            t_highest_income_index 
+        WHERE
+            //#ii.(ii : dom(income_array) & !jj.(jj : dom(income_array) => income_array(ii) >= income_array(jj)))
+            t_highest_income_index : dom(income_array) &
+            !jj.(jj : dom(income_array) => income_array(t_highest_income_index) >= income_array(jj))
+        THEN
+            highest_income_index := t_highest_income_index
+        END
+    END;
+    
+    find_largest_income_day2 =
+    PRE
+        size(income_array) = number_of_days
+    THEN
+        //
+        highest_income_index :: income_array~[{max(ran(income_array))}] //maximum kereses
     END;
     
     find_days_below_minimum =
     PRE
         size(income_array) = number_of_days
     THEN 
-        
+        // hh = { xx |xx : dom(f) & xx mod 2 = 0} //ebbol indulj ki
+        skip
     END
     
 END
