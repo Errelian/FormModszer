@@ -23,44 +23,33 @@ DEFINITIONS
 
 VARIABLES
         income_array,
-        income_read,
-        working_income_array,
         expense_array,
-        expense_read,
         
         minimum_income,
         has_min_income,
         day_indexes_below_minimum,
         
-        highest_income,
         highest_income_index
         
 INVARIANT
     income_array : seq(INTEGER) &
-    income_read : INTEGER &
-    working_income_array : seq(INTEGER) &//is income/expense an int or a float? do we want to read data starting form day 1 to 10 or day 10 to 1? INT
-    expense_array : seq(INTEGER) &//how do I create a sequence that stores a certain type of data? is this correct?
-    expense_read : INTEGER &
+    expense_array : seq(INTEGER) &
     
-    minimum_income : INTEGER & //do I need to define functions here? they are technically invariants I guess
+    minimum_income : INTEGER &
     has_min_income : BOOL &
-    day_indexes_below_minimum : seq(INTEGER) &
+    day_indexes_below_minimum : POW(INTEGER) &
     
-    highest_income : INTEGER &
     highest_income_index : INTEGER
     
 INITIALISATION
-    income_array :: seq(INTEGER) || //is there a way to initalise with empty sequences without type mismatching? = []
-    income_read :: INTEGER ||
-    working_income_array :: seq(INTEGER) ||
-    expense_array :: seq(INTEGER) || //sequence typing is a question in general
-    expense_read :: INTEGER ||
+    income_array  := [] ||
+    expense_array := [] ||
     
-    minimum_income :: INTEGER ||
+    minimum_income :: INTEGER||
     has_min_income := FALSE ||
-    day_indexes_below_minimum :: seq(INTEGER) ||
     
-    highest_income :: INTEGER ||
+    day_indexes_below_minimum := {} ||
+    
     highest_income_index :: INTEGER
     
 OPERATIONS
@@ -139,8 +128,7 @@ OPERATIONS
     PRE
         size(income_array) = number_of_days
     THEN 
-        // hh = { xx |xx : dom(f) & xx mod 2 = 0} //ebbol indulj ki
-        skip
+        day_indexes_below_minimum := {day | day : dom(income_array) & income_array(day) < minimum_income }    
     END
     
 END
