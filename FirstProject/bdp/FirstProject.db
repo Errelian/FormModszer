@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="C:\ELTE\AtelierB\Projects\FirstProject\bdp\expand_src" old_decomp_dir="C:\ELTE\AtelierB\Projects\FirstProject\bdp\src">
+        <!-- Definition directory list -->
+        <!-- Proof mechanisms -->
+        <!-- Component file list -->
+    </project>
+</db_xml>

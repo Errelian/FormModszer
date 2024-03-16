@@ -1,0 +1,3 @@
+parser_version('6493608583aa373b4ee423036e944e7074ab4262').
+classical_b('DEFINITION_FILE',['C:\\ELTE\\AtelierB\\Projects\\Porject1\\src\\definitions.def']).
+machine(definition_file(p5(1,1,1,2,24),definitions(p5(1,1,1,2,24),[expression_definition(p3(2,5,24),number_of_days,[],integer(p3(2,23,24),5))]))).
