@@ -1,0 +1,4 @@
+digraph {
+Thermostat [ label=" Thermostat " shape= box ]
+
+}

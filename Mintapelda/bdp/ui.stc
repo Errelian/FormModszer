@@ -1,0 +1,71 @@
+﻿<component_checksums>
+<base>
+<symbol name="NAME" value="ui" />
+<symbol name="TYPE" value="0" />
+<symbol name="PARAM" />
+<symbol name="CONSTRAINTS" />
+<symbol name="SEES" />
+<symbol name="INCLUDES" />
+<symbol name="IMPORTS" />
+<symbol name="PROMOTES" />
+<symbol name="EXTENDS" />
+<symbol name="USES" />
+<symbol name="SETS" />
+<symbol name="CONCRETE_VAR" />
+<symbol name="ABSTRACT_VAR" value="3691308f2a4c2f6983f2880d32e29c84" />
+<symbol name="CONCRETE_CONST" />
+<symbol name="ABSTRACT_CONST" />
+<symbol name="PROPERTIES" />
+<symbol name="INVARIANT" value="9106af8607de531ed629c5688db8df45" />
+<symbol name="VARIANT" />
+<symbol name="ASSERTIONS" />
+<symbol name="VALUES" />
+<operations>
+<operation>
+<symbol name="NAME" value="INITIALISATION" />
+<symbol name="COMPONENT" value="ui" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="fca3dd5aa2613d1e0bdcadbeed5d7f58" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="read" />
+<symbol name="COMPONENT" value="ui" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="f6a36476f851e1dafd6bcd1b0991f230" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="empty" />
+<symbol name="COMPONENT" value="ui" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="4f1169d5ecc41a6441d3e1fa5d855955" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+</operations>
+</base>
+<seen>
+</seen>
+<used>
+</used>
+<included>
+</included>
+<imported>
+</imported>
+<extended>
+</extended>
+<refined>
+</refined>
+</component_checksums>

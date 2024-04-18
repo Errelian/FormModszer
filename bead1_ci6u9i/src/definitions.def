@@ -1,0 +1,2 @@
+DEFINITIONS
+	max_measurement_results == 100 ; max_result_value == 100 ; min_result_value == -100

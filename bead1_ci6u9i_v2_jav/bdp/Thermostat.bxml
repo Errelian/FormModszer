@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='Thermostat' type='abstraction' position='true' semantic='true' b0check='false'>
+<Abstract_Variables>
+<Attr>
+<Pos l='24' c='1' s='18'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='25' c='5' s='19'/>
+</Attr>
+</Id>
+<Id value='max_result' typref='1'>
+<Attr>
+<Pos l='28' c='5' s='10'/>
+</Attr>
+</Id>
+<Id value='min_result' typref='1'>
+<Attr>
+<Pos l='29' c='5' s='10'/>
+</Attr>
+</Id>
+</Abstract_Variables>
+<Invariant>
+<Attr>
+<Pos l='31' c='1' s='9'/>
+</Attr>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='33' c='25' s='1'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='33' c='5' s='19'/>
+</Attr>
+</Id>
+<Unary_Exp op='seq' typref='5'>
+<Attr>
+<Pos l='33' c='27' s='3'/>
+</Attr>
+<Binary_Exp op='..' typref='2'>
+<Attr>
+<Pos l='33' c='40' s='2'/>
+</Attr>
+<Integer_Literal value='-100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='75' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='33' c='31' s='9'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='55' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='33' c='42' s='9'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='35' c='18' s='1'/>
+</Attr>
+<Id value='max_result' typref='1'>
+<Attr>
+<Pos l='35' c='7' s='10'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='2'>
+<Attr>
+<Pos l='35' c='29' s='2'/>
+</Attr>
+<Integer_Literal value='-100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='75' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='35' c='20' s='9'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='55' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='35' c='31' s='9'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='36' c='18' s='1'/>
+</Attr>
+<Id value='min_result' typref='1'>
+<Attr>
+<Pos l='36' c='7' s='10'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='2'>
+<Attr>
+<Pos l='36' c='29' s='2'/>
+</Attr>
+<Integer_Literal value='-100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='75' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='36' c='20' s='9'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='55' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='36' c='31' s='9'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred type='!'>
+<Attr>
+<Pos l='38' c='10' s='1'/>
+</Attr>
+<Variables>
+<Id value='ii' typref='1'>
+<Attr>
+<Pos l='38' c='8' s='2'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='38' c='42' s='2'/>
+</Attr>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='38' c='15' s='1'/>
+</Attr>
+<Id value='ii' typref='1'>
+<Attr>
+<Pos l='38' c='12' s='2'/>
+</Attr>
+</Id>
+<Unary_Exp op='dom' typref='2'>
+<Attr>
+<Pos l='38' c='17' s='3'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='38' c='21' s='19'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;=i'>
+<Attr>
+<Pos l='38' c='69' s='2'/>
+</Attr>
+<Binary_Exp op='(' typref='1'>
+<Attr>
+<Pos l='38' c='64' s='0'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='38' c='45' s='19'/>
+</Attr>
+</Id>
+<Id value='ii' typref='1'>
+<Attr>
+<Pos l='38' c='65' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id value='max_result' typref='1'>
+<Attr>
+<Pos l='38' c='72' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op='&lt;=i'>
+<Attr>
+<Pos l='44' c='33' s='2'/>
+</Attr>
+<Unary_Exp op='size' typref='1'>
+<Attr>
+<Pos l='44' c='7' s='4'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='44' c='12' s='19'/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value='100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='36' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='44' c='36' s='23'/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Attr>
+<Pos l='45' c='1' s='14'/>
+</Attr>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='46' c='25' s='2'/>
+</Attr>
+<Variables>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='46' c='5' s='19'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySeq typref='4'>
+<Attr>
+<Pos l='46' c='28' s='2'/>
+</Attr>
+</EmptySeq>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='48' c='19' s='2'/>
+</Attr>
+<Variables>
+<Id value='max_result' typref='1'>
+<Attr>
+<Pos l='48' c='8' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Integer_Literal value='0' typref='1'>
+<Attr>
+<Pos l='48' c='22' s='1'/>
+</Attr>
+</Integer_Literal>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='49' c='19' s='2'/>
+</Attr>
+<Variables>
+<Id value='min_result' typref='1'>
+<Attr>
+<Pos l='49' c='8' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Integer_Literal value='0' typref='1'>
+<Attr>
+<Pos l='49' c='22' s='1'/>
+</Attr>
+</Integer_Literal>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='init'>
+<Attr>
+<Pos l='52' c='5' s='4' endLine='58'/>
+</Attr>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='54' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='54' c='9' s='19'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySeq typref='4'>
+<Attr>
+<Pos l='54' c='32' s='2'/>
+</Attr>
+</EmptySeq>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='56' c='23' s='2'/>
+</Attr>
+<Variables>
+<Id value='max_result' typref='1'>
+<Attr>
+<Pos l='56' c='12' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Integer_Literal value='0' typref='1'>
+<Attr>
+<Pos l='56' c='26' s='1'/>
+</Attr>
+</Integer_Literal>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='57' c='23' s='2'/>
+</Attr>
+<Variables>
+<Id value='min_result' typref='1'>
+<Attr>
+<Pos l='57' c='12' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Integer_Literal value='0' typref='1'>
+<Attr>
+<Pos l='57' c='26' s='1'/>
+</Attr>
+</Integer_Literal>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='add_measurement_result'>
+<Attr>
+<Pos l='62' c='5' s='22' endLine='87'/>
+</Attr>
+<Input_Parameters>
+<Id value='new_measurement_result' typref='1'>
+<Attr>
+<Pos l='62' c='28' s='22'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='64' c='32' s='1'/>
+</Attr>
+<Id value='new_measurement_result' typref='1'>
+<Attr>
+<Pos l='64' c='9' s='22'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='2'>
+<Attr>
+<Pos l='64' c='43' s='2'/>
+</Attr>
+<Integer_Literal value='-100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='75' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='64' c='34' s='9'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='55' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='64' c='45' s='9'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='65' c='31' s='1'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='65' c='11' s='19'/>
+</Attr>
+</Id>
+<Unary_Exp op='seq' typref='5'>
+<Attr>
+<Pos l='65' c='33' s='3'/>
+</Attr>
+<Binary_Exp op='..' typref='2'>
+<Attr>
+<Pos l='65' c='46' s='2'/>
+</Attr>
+<Integer_Literal value='-100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='75' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='65' c='37' s='9'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='55' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='65' c='48' s='9'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;=i'>
+<Attr>
+<Pos l='66' c='37' s='2'/>
+</Attr>
+<Unary_Exp op='size' typref='1'>
+<Attr>
+<Pos l='66' c='11' s='4'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='66' c='16' s='19'/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value='100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='36' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='66' c='40' s='23'/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='68' c='9' s='2'/>
+</Attr>
+<Condition>
+<Exp_Comparison op='&lt;i'>
+<Attr>
+<Pos l='69' c='39' s='1'/>
+</Attr>
+<Unary_Exp op='size' typref='1'>
+<Attr>
+<Pos l='69' c='13' s='4'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='69' c='18' s='19'/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value='100' typref='1'>
+<Attr>
+<Pos f='definitions.def' l='2' c='36' s='3' expanded='yes'/>
+<Pos f='Thermostat.mch' l='69' c='41' s='23'/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Condition>
+<Then>
+<LET_Sub>
+<Attr>
+<Pos l='71' c='13' s='3'/>
+</Attr>
+<Variables>
+<Id value='new_measurement_results' typref='4'>
+<Attr>
+<Pos l='71' c='17' s='23'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Valuation ident='new_measurement_results' typref='4'>
+<Attr>
+<Pos l='72' c='17' s='23'/>
+</Attr>
+<Binary_Exp op='&lt;-' typref='4'>
+<Attr>
+<Pos l='72' c='63' s='2'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='72' c='43' s='19'/>
+</Attr>
+</Id>
+<Id value='new_measurement_result' typref='1'>
+<Attr>
+<Pos l='72' c='66' s='22'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Valuation>
+</Values>
+<Then>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='74' c='37' s='2'/>
+</Attr>
+<Variables>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='74' c='17' s='19'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='new_measurement_results' typref='4'>
+<Attr>
+<Pos l='74' c='40' s='23'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='75' c='31' s='2'/>
+</Attr>
+<Variables>
+<Id value='max_result' typref='1'>
+<Attr>
+<Pos l='75' c='20' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Unary_Exp op='imax' typref='1'>
+<Attr>
+<Pos l='75' c='34' s='3'/>
+</Attr>
+<Unary_Exp op='ran' typref='2'>
+<Attr>
+<Pos l='75' c='38' s='3'/>
+</Attr>
+<Id value='new_measurement_results' typref='4'>
+<Attr>
+<Pos l='75' c='42' s='23'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Unary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Then>
+</LET_Sub>
+</Then>
+<Else>
+<LET_Sub>
+<Attr>
+<Pos l='79' c='13' s='3'/>
+</Attr>
+<Variables>
+<Id value='new_measurement_results' typref='4'>
+<Attr>
+<Pos l='79' c='17' s='23'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Valuation ident='new_measurement_results' typref='4'>
+<Attr>
+<Pos l='80' c='17' s='23'/>
+</Attr>
+<Binary_Exp op='&lt;-' typref='4'>
+<Attr>
+<Pos l='80' c='69' s='2'/>
+</Attr>
+<Unary_Exp op='tail' typref='4'>
+<Attr>
+<Pos l='80' c='43' s='4'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='80' c='48' s='19'/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value='new_measurement_result' typref='1'>
+<Attr>
+<Pos l='80' c='72' s='22'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Valuation>
+</Values>
+<Then>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='82' c='37' s='2'/>
+</Attr>
+<Variables>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='82' c='17' s='19'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='new_measurement_results' typref='4'>
+<Attr>
+<Pos l='82' c='40' s='23'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='83' c='31' s='2'/>
+</Attr>
+<Variables>
+<Id value='max_result' typref='1'>
+<Attr>
+<Pos l='83' c='20' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Unary_Exp op='imax' typref='1'>
+<Attr>
+<Pos l='83' c='34' s='3'/>
+</Attr>
+<Unary_Exp op='ran' typref='2'>
+<Attr>
+<Pos l='83' c='38' s='3'/>
+</Attr>
+<Id value='new_measurement_results' typref='4'>
+<Attr>
+<Pos l='83' c='42' s='23'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Unary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Then>
+</LET_Sub>
+</Else>
+</If_Sub>
+</Body>
+</Operation>
+<Operation name='get_max_value'>
+<Attr>
+<Pos l='91' c='5' s='13' endLine='96'/>
+</Attr>
+<Precondition>
+<Exp_Comparison op='&gt;i'>
+<Attr>
+<Pos l='93' c='35' s='1'/>
+</Attr>
+<Unary_Exp op='size' typref='1'>
+<Attr>
+<Pos l='93' c='9' s='4'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='93' c='14' s='19'/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value='0' typref='1'>
+<Attr>
+<Pos l='93' c='37' s='1'/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='95' c='20' s='2'/>
+</Attr>
+<Variables>
+<Id value='max_result' typref='1'>
+<Attr>
+<Pos l='95' c='9' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Unary_Exp op='imax' typref='1'>
+<Attr>
+<Pos l='95' c='23' s='3'/>
+</Attr>
+<Unary_Exp op='ran' typref='2'>
+<Attr>
+<Pos l='95' c='27' s='3'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='95' c='31' s='19'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Unary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_min_value'>
+<Attr>
+<Pos l='100' c='5' s='13' endLine='105'/>
+</Attr>
+<Precondition>
+<Exp_Comparison op='&gt;i'>
+<Attr>
+<Pos l='102' c='35' s='1'/>
+</Attr>
+<Unary_Exp op='size' typref='1'>
+<Attr>
+<Pos l='102' c='9' s='4'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='102' c='14' s='19'/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value='0' typref='1'>
+<Attr>
+<Pos l='102' c='37' s='1'/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='104' c='20' s='2'/>
+</Attr>
+<Variables>
+<Id value='min_result' typref='1'>
+<Attr>
+<Pos l='104' c='9' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Unary_Exp op='imin' typref='1'>
+<Attr>
+<Pos l='104' c='23' s='3'/>
+</Attr>
+<Unary_Exp op='ran' typref='2'>
+<Attr>
+<Pos l='104' c='27' s='3'/>
+</Attr>
+<Id value='measurement_results' typref='4'>
+<Attr>
+<Pos l='104' c='31' s='19'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Unary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='0'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='5'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

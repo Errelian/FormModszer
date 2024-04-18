@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="C:\ELTE\AtelierB\Projects\Mintapelda\bdp\expand_src" old_decomp_dir="C:\ELTE\AtelierB\Projects\Mintapelda\bdp\src">
+        <!-- Definition directory list -->
+        <!-- Proof mechanisms -->
+        <!-- Component file list -->
+        <component_file path="C:/ELTE/AtelierB/Projects/Mintapelda/src" name="business" suffix="mch" user="balaz">
+            <component name="business" type="specification" />
+        </component_file>
+        <component_file path="C:/ELTE/AtelierB/Projects/Mintapelda/src" name="logic" suffix="mch" user="balaz">
+            <component name="logic" type="specification" />
+        </component_file>
+        <component_file path="C:/ELTE/AtelierB/Projects/Mintapelda/src" name="ui" suffix="mch" user="balaz">
+            <component name="ui" type="specification" />
+        </component_file>
+    </project>
+</db_xml>

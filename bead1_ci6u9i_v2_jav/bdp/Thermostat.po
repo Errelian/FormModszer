@@ -1,0 +1,85 @@
+THEORY ProofList IS
+_f(1) & _f(8) & _f(21) & WellDefinedness_get_min_value.2,(_f(33) => _f(40));
+_f(1) & _f(8) & _f(21) & WellDefinedness_get_min_value.1,(_f(33) => _f(38));
+_f(1) & _f(8) & WellDefinednessPrecondition_get_min_value.1,(_f(32) => _f(31));
+_f(1) & _f(8) & _f(21) & WellDefinedness_get_max_value.2,(_f(33) => _f(39));
+_f(1) & _f(8) & _f(21) & WellDefinedness_get_max_value.1,(_f(33) => _f(38));
+_f(1) & _f(8) & WellDefinednessPrecondition_get_max_value.1,(_f(32) => _f(31));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & WellDefinedness_add_measurement_result.9,(_f(15) & _f(16) & _f(33) => _f(35));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & WellDefinedness_add_measurement_result.8,(_f(15) & _f(16) & _f(33) => _f(34));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & WellDefinedness_add_measurement_result.7,(_f(15) & _f(33) => _f(37));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & WellDefinedness_add_measurement_result.6,(_f(15) & _f(33) => _f(36));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & WellDefinedness_add_measurement_result.5,(_f(15) & _f(33) => _f(31));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & WellDefinedness_add_measurement_result.4,(_f(12) & _f(13) & _f(33) => _f(35));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & WellDefinedness_add_measurement_result.3,(_f(12) & _f(13) & _f(33) => _f(34));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & WellDefinedness_add_measurement_result.2,(_f(12) & _f(33) => _f(31));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & WellDefinedness_add_measurement_result.1,(_f(33) => _f(31));
+_f(1) & _f(8) & WellDefinednessPrecondition_add_measurement_result.1,(_f(9) & _f(32) => _f(31));
+_f(1) & WellDefinednessInvariant.2,(_f(10) & _f(26) & _f(27) & _f(28) & _f(29) => _f(31));
+_f(1) & WellDefinednessInvariant.1,(_f(10) & _f(26) & _f(27) & _f(22) & _f(29) => _f(30));
+_f(1) & _f(8) & _f(21) & Operation_get_min_value.1,(_f(3) => _f(25));
+_f(1) & _f(8) & _f(21) & Operation_get_max_value.2,(_f(22) & _f(3) => _f(24));
+_f(1) & _f(8) & _f(21) & Operation_get_max_value.1,(_f(3) => _f(23));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & Operation_add_measurement_result.8,(_f(15) & _f(16) & _f(3) => _f(20));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & Operation_add_measurement_result.7,(_f(15) & _f(16) & _f(14) & _f(3) => _f(19));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & Operation_add_measurement_result.6,(_f(15) & _f(16) & _f(3) => _f(18));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & Operation_add_measurement_result.5,(_f(15) & _f(16) & _f(3) => _f(17));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & Operation_add_measurement_result.4,(_f(12) & _f(13) & _f(3) => _f(20));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & Operation_add_measurement_result.3,(_f(12) & _f(13) & _f(14) & _f(3) => _f(19));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & Operation_add_measurement_result.2,(_f(12) & _f(13) & _f(3) => _f(18));
+_f(1) & _f(8) & _f(9) & _f(10) & _f(11) & Operation_add_measurement_result.1,(_f(12) & _f(13) & _f(3) => _f(17));
+_f(1) & _f(8) & Operation_init.4,(_f(3) => _f(7));
+_f(1) & _f(8) & Operation_init.3,(_f(2) & _f(3) => _f(6));
+_f(1) & _f(8) & Operation_init.2,(_f(3) => _f(5));
+_f(1) & _f(8) & Operation_init.1,(_f(3) => _f(4));
+_f(1) & Initialisation.4,(_f(3) => _f(7));
+_f(1) & Initialisation.3,(_f(2) & _f(3) => _f(6));
+_f(1) & Initialisation.2,(_f(3) => _f(5));
+_f(1) & Initialisation.1,(_f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((ii) : (dom({})));
+"Invariant is preserved";
+(({}) : (seq(((-100) .. (100)))));
+((0) : (((-100) .. (100))));
+(({} )(ii) <= 0);
+(size({}) <= 100);
+measurement_results : NATURAL-{0} +-> ((-100) .. (100)) & ((measurement_results) : (seq(((-100) .. (100))))) & ((max_result) : (((-100) .. (100)))) & ((min_result) : (((-100) .. (100)))) & !(ii).(((((ii) : (dom(measurement_results)))) => (((measurement_results )(ii) <= max_result)))) & (size(measurement_results) <= 100);
+((new_measurement_result) : (((-100) .. (100))));
+measurement_results : NATURAL-{0} +-> ((-100) .. (100)) & ((measurement_results) : (seq(((-100) .. (100)))));
+(size(measurement_results) <= 100);
+(size(measurement_results) +1 <= 100);
+((new_measurement_results) = (((measurement_results) <- (new_measurement_result))));
+((ii) : (dom(new_measurement_results)));
+not((size(measurement_results) +1 <= 100));
+((new_measurement_results) = (((tail(measurement_results)) <- (new_measurement_result))));
+((new_measurement_results) : (seq(((-100) .. (100)))));
+((max(ran(new_measurement_results))) : (((-100) .. (100))));
+((new_measurement_results )(ii) <= max(ran(new_measurement_results)));
+(size(new_measurement_results) <= 100);
+(0 +1 <= size(measurement_results));
+((ii) : (dom(measurement_results)));
+((max(ran(measurement_results))) : (((-100) .. (100))));
+((measurement_results )(ii) <= max(ran(measurement_results)));
+((min(ran(measurement_results))) : (((-100) .. (100))));
+((max_result) : (((-100) .. (100))));
+((min_result) : (((-100) .. (100))));
+!(ii).(((((ii) : (dom(measurement_results)))) => (((measurement_results )(ii) <= max_result))));
+"Invariant is well defined";
+((measurement_results) : (((dom(measurement_results)) +-> (ran(measurement_results)))));
+((measurement_results) : (seq(ran(measurement_results))));
+"Operation precondition is well defined";
+"Operation is well defined";
+not(((ran(new_measurement_results)) = ({})));
+((((ran(new_measurement_results)) /\ (NATURAL))) : (FIN(NATURAL)));
+not(((measurement_results) = ({})));
+((tail(measurement_results)) : (seq(ran(tail(measurement_results)))));
+not(((ran(measurement_results)) = ({})));
+((((ran(measurement_results)) /\ (NATURAL))) : (FIN(NATURAL)));
+((((ran(measurement_results)) /\ ((INTEGER - NATURAL)))) : (FIN(INTEGER)))
+END
+&
+THEORY EnumerateX
+END

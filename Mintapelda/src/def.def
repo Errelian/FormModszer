@@ -1,0 +1,6 @@
+DEFINITIONS
+    MAX_DARAB == 50 ;
+    TMAX == 100;
+    TMIN == -100;
+    TT == (TMIN..TMAX) ;
+    TTR == ((TMIN+1)..(TMAX+1)) ;

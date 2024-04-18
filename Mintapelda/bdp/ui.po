@@ -1,0 +1,27 @@
+﻿THEORY ProofList IS
+  _f(5) & empty.2,(_f(10) => _f(4));
+  _f(5) & empty.1,(_f(9) => _f(2));
+  _f(5) & read.1,(_f(6) & _f(7) => _f(8));
+  Initialisation.2,(_f(3) => _f(4));
+  Initialisation.1,(_f(1) => _f(2))
+END
+&
+THEORY Formulas IS
+  "`Check that the invariant (ss: seq(-100..100)) is established by the initialisation - ref 3.3'";
+  ({}: seq(-100..100));
+  "`Check that the invariant (size(ss)>50) is established by the initialisation - ref 3.3'";
+  (51<=size({}));
+  ("`Component invariant'" & ss: seq(-100..100) & 51<=size(ss));
+  ("`Local hypotheses'" & ss$1: seq(-100..100) & size(ss$1)+1<=50);
+  "`Check that the invariant (size(ss)>50) is preserved by the operation - ref 3.4'";
+  (51<=size(ss$1));
+  "`Check that the invariant (ss: seq(-100..100)) is preserved by the operation - ref 3.4'";
+  "`Check that the invariant (size(ss)>50) is preserved by the operation - ref 3.4'"
+END
+&
+THEORY EnumerateX 
+END
+&
+THEORY Version IS
+  POVersion("svn")(CLT == "svn")(genOPO == KO, genDivergencePO == KO, genWDPO == OK, local_op == OK)
+END

@@ -1,0 +1,28 @@
+﻿THEORY ProofList IS
+  _f(1) & _f(6) & _f(9) & calc.1,(_f(10) & _f(7) => _f(11));
+  _f(1) & _f(6) & init.2,(_f(8) => _f(5));
+  _f(1) & _f(6) & init.1,(_f(7) => _f(3));
+  _f(1) & Initialisation.2,(_f(4) => _f(5));
+  _f(1) & Initialisation.1,(_f(2) => _f(3))
+END
+&
+THEORY Formulas IS
+  ("`Seen and used machines invariants'" & ss: seq(-100..100) & 51<=size(ss));
+  "`Check that the invariant (ff: seq(-100..100)) is established by the initialisation - ref 3.3'";
+  ({}: seq(-100..100));
+  "`Check that the invariant (size(ff)<50) is established by the initialisation - ref 3.3'";
+  (size({})+1<=50);
+  ("`Component invariant'" & ff: seq(-100..100) & size(ff)+1<=50 & (not(ff = {}) => !ii.(ii: dom(ff) => ff(ii) = ss(ii)+1) & dom(ff) = dom(ss)));
+  "`Check that the invariant (ff: seq(-100..100)) is preserved by the operation - ref 3.4'";
+  "`Check that the invariant (size(ff)<50) is preserved by the operation - ref 3.4'";
+  ("`calc preconditions in this component'" & 1<=size(ss) & ss: seq(-100..100));
+  ("`Local hypotheses'" & ff$1: seq(-99..100) & !ii.(ii: dom(ss) => ff$1(ii) = ss(ii)+1) & dom(ss) = dom(ff$1) & size(ff$1)+1<=50);
+  (ff$1: seq(-100..100))
+END
+&
+THEORY EnumerateX 
+END
+&
+THEORY Version IS
+  POVersion("svn")(CLT == "svn")(genOPO == KO, genDivergencePO == KO, genWDPO == OK, local_op == OK)
+END

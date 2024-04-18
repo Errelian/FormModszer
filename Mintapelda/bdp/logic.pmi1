@@ -1,0 +1,31 @@
+﻿THEORY BalanceX IS
+  logic,3,0,0,2,0,0,0;
+  Initialisation,2,0,0,2,0,0,0;
+  calc,1,0,0,0,0,0,0
+END
+&
+THEORY ProofState IS
+  Unproved;
+  Proved(0);
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  ?;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  POVersion("svn")(CLT == "svn")(genOPO == KO,genDivergencePO == KO,genWDPO == OK,local_op == OK);
+  PRVersion("svn")(CLT == "svn")
+END

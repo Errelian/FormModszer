@@ -1,0 +1,23 @@
+﻿THEORY ProofList IS
+  _f(1) & _f(2) & _f(3) & calc.2,(_f(7) & _f(8) => _f(9));
+  _f(1) & _f(2) & _f(3) & calc.1,(_f(4) & _f(5) => _f(6))
+END
+&
+THEORY Formulas IS
+  ("`Included,imported and extended machines invariants'" & ff: seq(-100..100) & size(ff)+1<=50 & ss: seq(-100..100) & 51<=size(ss));
+  ("`Component invariant'" & (not(ff = {}) => not(ss = {})) & (not(ff = {}) => !ii.(ii: dom(ff) => ff(ii) = ss(ii)+1) & dom(ff) = dom(ss)));
+  ("`calc preconditions in this component'" & 1<=size(ss) & ss: seq(-100..100));
+  ("`Local hypotheses'" & ff$1: seq(-99..100) & !ii.(ii: dom(ss) => ff$1(ii) = ss(ii)+1) & dom(ss) = dom(ff$1) & size(ff$1)+1<=50 & ff$1: seq(-100..100) & not(ff$1 = {}));
+  "`Check that the invariant (ff/=<> => ss/=<>) is preserved by the operation - ref 3.4'";
+  (not(ss = {}));
+  ("`Local hypotheses'" & ff$1: seq(-99..100) & !ii.(ii: dom(ss) => ff$1(ii) = ss(ii)+1) & dom(ss) = dom(ff$1) & size(ff$1)+1<=50 & ff$1: seq(-100..100) & not(ff$1 = {}) & ii: dom(ff$1));
+  "`Check that the invariant (ff/=<> => !ii.(ii: dom(ff) => ff(ii) = ss(ii)+1) & dom(ff) = dom(ss)) is preserved by the operation - ref 3.4'";
+  (ff$1(ii) = ss(ii)+1)
+END
+&
+THEORY EnumerateX 
+END
+&
+THEORY Version IS
+  POVersion("svn")(CLT == "svn")(genOPO == KO, genDivergencePO == KO, genWDPO == OK, local_op == OK)
+END

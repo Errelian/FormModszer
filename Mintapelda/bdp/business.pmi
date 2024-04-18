@@ -1,0 +1,31 @@
+﻿THEORY BalanceX IS
+  business,2,0,0,2,0,0,0;
+  InstanciatedConstraintsLemmas,0,0,0,0,0,0,0;
+  Initialisation,0,0,0,0,0,0,0;
+  b_read,0,0,0,0,0,0,0;
+  b_empty,0,0,0,0,0,0,0;
+  calc,2,0,0,2,0,0,0
+END
+&
+THEORY ProofState IS
+  Proved(0);
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  POVersion("svn")(CLT == "svn")(genOPO == KO,genDivergencePO == KO,genWDPO == OK,local_op == OK);
+  PRVersion("svn")(CLT == "svn")
+END
