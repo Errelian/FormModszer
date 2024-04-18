@@ -1,0 +1,16 @@
+DEFINITIONS
+    MAX_CUSTOMERS == 1000 ;
+    //TODO gender sajat tipus
+    CUSTOMER == 
+    struct(
+         customer_id : NAT1,
+         gender : STRING,
+         total_purchase_value : 0..10000000,
+         total_purchase_costs : 0..10000000,
+         amount_of_purchases: 1..1000
+     ) ; 
+    CALCULATED_CUSTOMER == 
+    struct(
+         customer_id : NAT1,
+         profit : INT
+     )

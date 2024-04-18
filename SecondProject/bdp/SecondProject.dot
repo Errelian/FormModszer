@@ -1,0 +1,6 @@
+digraph {
+business [ label=" business " shape= box ]
+logic [ label=" logic " shape= box ]
+ui [ label=" ui " shape= box ]
+
+}
